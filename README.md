@@ -1,6 +1,8 @@
-# 🏥 ABD Práctica 05: Automatización y Análisis de Pacientes
+# 🏥 ABD Práctica 05: Automatización y Análisis de Pacientes - Quantify - Base de Datos MD
 
 Este repositorio contiene los scripts y recursos para la **Práctica 05** de la asignatura de Administración de Bases de Datos. El objetivo principal es la implementación de rutinas SQL (Procedimientos Almacenados y Funciones) para la generación masiva de datos y la visualización de métricas mediante un dashboard.
+
+## Poblacion de Datos Pacientes
 
 ## 📂 Estructura del Proyecto
 
