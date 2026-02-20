@@ -40,13 +40,6 @@ REGLAS DE NEGOCIO CONSIDERADAS
 ESTRUCTURA DEL PROYECTO
 INTEGRANTES MERMA 
 
-# Integrantes
-| Integrante | Contacto | Rol |
-| :--- | :--- | :--- |
-| Jesús Alejandro Artiaga Morales| [Jesus Artiaga](https://github.com/JesuuusArt) | Developer - Encargado del área de registros medicos |
-| Angel de Jesús Baños Tellez | [Angel_JesusBT](https://github.com/angelJesus13) | Developer - Encargado del área de registros medicos |
-| Al Farias Leyva | [Al Farias](https://github.com/fariasdgs) | Developer - Encargado del área de registros medicos |
-| Francisco Garcia Garcia | [Francisco Garcia](https://github.com/F-Anks) | Developer - Encargado del área de registros medicos |
 
 # 🏥 Práctica 05 — Población de Datos de Pacientes
 
@@ -169,3 +162,11 @@ Donde <EQUIPO> puede ser:
 - MR  
 - MD  
 - MS  
+
+# Integrantes
+| Integrante | Contacto | Rol |
+| :--- | :--- | :--- |
+| Jesús Alejandro Artiaga Morales| [Jesus Artiaga](https://github.com/JesuuusArt) | Developer - Encargado del área de registros medicos |
+| Angel de Jesús Baños Tellez | [Angel_JesusBT](https://github.com/angelJesus13) | Developer - Encargado del área de registros medicos |
+| Al Farias Leyva | [Al Farias](https://github.com/fariasdgs) | Developer - Encargado del área de registros medicos |
+| Francisco Garcia Garcia | [Francisco Garcia](https://github.com/F-Anks) | Developer - Encargado del área de registros medicos |
