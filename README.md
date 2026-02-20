@@ -8,25 +8,24 @@ El proyecto está organizado de la siguiente manera para separar la lógica de b
 
 ```bash
 ABD_PRACTICA05_AREA/
-├── dashboard/                  # Archivos de visualización y reportes
-│   └── dashboard_pacientes.nbi # Archivo de Navicat BI para análisis de pacientes
+├── dashboard/                 
+│   └── dashboard_pacientes.nbi 
 │
-├── db/                         # Núcleo de la base de datos
-│   ├── backups/                # Copias de seguridad lógicas
+├── db/                         
+│   ├── backups/                
 │   │   ├── backup_onlystructure.sql
 │   │   └── backup_onlydata.sql
 │   │
-│   ├── routines/               # Lógica programable
+│   ├── routines/               
 │   │   ├── functions/
 │   │   │   └── fn_genera_fech_nacimiento.sql
 │   │   │
 │   │   └── stored_procedures/
 │   │       └── sp_poblar_pacientes.sql
 │   │
-│   ├── scripts/                # Scripts DDL/DML adicionales
-│   └── tests/                  # Pruebas unitarias
-│
-└── README.md                   # Documentación del proyecto
+│   ├── scripts/                
+│   └── tests/                  
+└── README.md                  
 ```
 
 NOMBRE REPO
