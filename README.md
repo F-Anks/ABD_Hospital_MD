@@ -31,119 +31,144 @@ ABD_PRACTICA05_AREA/
 └── README.md                   # Documentación del proyecto
 ```
 
-## DESCRIPCION
- El estudiante se coordinara con su equipo de trabajo para trabajar en las rutinas SQL (funciones y/o procedimientos almacenados) necesarias para la poblacion pacientes, respetando la estructura jerarquica relacional del modelo de dato, testeando en diferentes escenarios de pruebas basados en volumen y naturaleza.
-
-## TEST
-
-## 📊 Tabla de los Test (15)
-
-| Nº Test | Descripción | Cantidad | Condiciones / Filtros | Estado |
-|---------|------------|----------|------------------------|--------|
-| Test 1  | Registro de Paciente | 1 | Sin condiciones | En espera ⌛️|
-| Test 2  | Registro de Pacientes | 10 | Sin condiciones | En espera ⌛️|
-| Test 3  | Registro de Pacientes | 100 | Sin condiciones | En espera ⌛️|
-| Test 4  | Registro de Pacientes | 1000 | Sin condiciones | En espera ⌛️|
-| Test 5  | Registro de Pacientes | 10000 | Sin condiciones | En espera ⌛️|
-| Test 6  | Registro de Pacientes | 1000000 | Sin condiciones | En espera ⌛️|
-| Test 7  | Registro de Pacientes Mujeres | 150 | Género: Femenino | En espera ⌛️|
-| Test 8  | Registro de Pacientes Varones | 340 | Género: Masculino, Edad entre 20 y 30 años | En espera ⌛️|
-| Test 9  | Registro de Pacientes | 500 | Edad máxima: 65 años | En espera ⌛️|
-| Test 10 | Registro de Pacientes Vivos | 2200 | Estado: Vivo | En espera ⌛️|
-| Test 11 | Registro de Pacientes Mujeres Finados | 502 | Género: Femenino, Estado: Finado, Edad > 45 años | En espera ⌛️|
-| Test 12 | Registro de Pacientes en Coma | 30 | Estado Médico: Coma | En espera ⌛️|
-| Test 13 | Registro de Pacientes en Estado Vegetativo | 15 | Estado Médico: Vegetativo | En espera ⌛️|
-| Test 14 | Registro de Pacientes en Cuidados Paliativos | 107 | Estado Médico: "Cuidados Paliativos" | En espera ⌛️|
-| Test 15 | Registro de Pacientes Pediátricos | 208 | Clasificación: Pediátrico | En espera ⌛️|
-
-## 📑 REGLAS DE NEGOCIO CONSIDERADAS
-
-Las siguientes reglas de negocio fueron definidas para garantizar la integridad, coherencia y validez de los datos generados durante la automatización y análisis de pacientes:
-
-### 1️⃣ Reglas Generales de Registro
-- Todo paciente debe tener un identificador único (PK).
-- Ningún paciente puede registrarse sin nombre, género y fecha de nacimiento.
-- La edad debe calcularse a partir de la fecha de nacimiento (no almacenarse directamente si es campo derivado).
-- La edad permitida debe estar en un rango válido (0 a 120 años).
-- No se permiten registros duplicados con la misma combinación de CURP o identificador oficial (si aplica).
-
-### 2️⃣ Reglas de Género
-- Los valores permitidos para género son:
-  - `H` → Hombre
-  - `M` → Mujer
-  - `NB` → No Binario
-- No se aceptan otros valores fuera del catálogo definido.
-
-### 3️⃣ Reglas de Estado Vital
-- El estado del paciente solo puede ser:
-  - `VIVO`
-  - `FINADO`
-- Si el paciente está marcado como `FINADO`, debe existir fecha de defunción.
-- Un paciente `FINADO` no puede tener estados médicos activos posteriores a la fecha de defunción.
-
-### 4️⃣ Reglas de Estado Médico
-Los estados médicos permitidos son:
-- `COMA`
-- `VEGETATIVO`
-- `CUIDADOS PALIATIVOS`
-- `ESTABLE`
-- `CRÍTICO`
-
-- Un paciente solo puede tener un estado médico principal activo a la vez.
-- El estado médico debe ser coherente con el estado vital.
-
-### 5️⃣ Reglas de Clasificación por Edad
-- Paciente Pediátrico: Edad menor a 18 años.
-- Paciente Adulto: Edad entre 18 y 59 años.
-- Paciente Adulto Mayor: Edad igual o mayor a 60 años.
-
-### 6️⃣ Reglas para Generación Masiva (Procedimiento sp_poblar_pacientes)
-- El procedimiento debe validar:
-  - Que la cantidad solicitada sea mayor a 0.
-  - Que el género enviado como parámetro sea válido.
-  - Que el rango de edad mínimo y máximo sea coherente.
-- En pruebas de alto volumen (ej. 1,000,000 registros), se debe garantizar:
-  - No violación de llaves primarias.
-  - No bloqueos prolongados.
-  - Uso eficiente de transacciones.
-
-### 7️⃣ Reglas de Integridad Referencial
-- Todo paciente debe respetar la estructura jerárquica relacional del modelo.
-- No se permiten registros huérfanos en tablas relacionadas.
-- Se deben respetar llaves foráneas y restricciones definidas en el modelo.
-
-### 8️⃣ Reglas para Pruebas (Testing)
-- Cada escenario de prueba debe validar:
-  - Cantidad exacta de registros generados.
-  - Cumplimiento de filtros aplicados.
-  - Correcto almacenamiento en base de datos.
-- Los resultados deben poder visualizarse en el dashboard BI para análisis estadístico.
+NOMBRE REPO
+NOMBRE DEL EQUIPO - ROLE REGISTROS MEDICOS
+NOMBRE DE LA PRACTICA 
+DESCRIPCION DE PADLET 
+OBJETIVO DE LA PRACTICA 
+TABLA DE LOS TEST 15 
+PRUEBAS DE VOLUMEN Y NATURALEZA
+REGLAS DE NEGOCIO CONSIDERADAS
+ESTRUCTURA DEL PROYECTO
+INTEGRANTES MERMA 
 
 
+# 🏥 Práctica 05 — Población de Datos de Pacientes
 
-
-
-## 📋 Tabla de Integrantes
-
-| Integrante | Contacto | Rol |
-| :--- | :--- | :--- |
-| Jesús Alejandro Artiaga Morales | [Jesus Artiaga](https://github.com/JesuuusArt) | Developer - Encargado del área de registros médicos |
-| Angel de Jesús Baños Tellez | [Angel_JesusBT](https://github.com/angelJesus13) | Developer - Encargado del área de registros médicos |
-| Al Farias Leyva | [Al Farias](https://github.com/fariasdgs) | Developer - Encargado del área de registros médicos |
-| Francisco Garcia Garcia | [Francisco Garcia](https://github.com/F-Anks) | Developer - Encargado del área de registros médicos |
+**Firmas:** 40  
+**Fecha de entrega:** Viernes 13 de Febrero  
 
 ---
 
-## 🌳 Estructura Jerárquica del Equipo
+## 📌 Objetivo
 
-- **Equipo ABD - Práctica 05**
-  - **Área: Registros Médicos**
-    - Jesús Alejandro Artiaga Morales
-    - Angel de Jesús Baños Tellez
-    - Al Farias Leyva
-    - Francisco Garcia Garcia
-  - **Responsabilidad General**
-    - Desarrollo de rutinas SQL
-    - Implementación de pruebas de volumen
-    - Validación de reglas de negocio
-    - Visualización de métricas en dashboard BI
+El estudiante se coordinará con su equipo de trabajo para desarrollar las rutinas SQL necesarias (Funciones y/o Procedimientos Almacenados) para la población de pacientes, respetando la estructura jerárquica relacional del modelo de datos.
+
+Se deberán realizar pruebas en distintos escenarios basados en:
+
+- Volumen de registros  
+- Naturaleza de los datos  
+
+---
+
+## 🧠 Recomendaciones
+
+- Modularizar las funciones para su reutilización en futuros procesos de población de datos.  
+- Considerar las reglas de negocio (validaciones y límites permitidos) para generar datos coherentes.  
+- Utilizar mecanismos compatibles con SQL como:
+  - ELT()
+  - RAND()
+  - SUBQUERIES
+  - TRANSACTION
+  - ROLLBACK
+- Aplicar buenas prácticas de programación.  
+- Documentar adecuadamente el código de las rutinas.  
+
+---
+
+## ⚙️ Actividades
+
+### 1️⃣ Actualización del Modelo
+
+- Actualizar la composición de las tablas:
+  - Persona  
+  - Persona Física  
+  - Paciente  
+- Verificar las relaciones de integridad (Llaves Foráneas).  
+
+---
+
+### 2️⃣ Procedimiento Almacenado
+
+Actualizar el procedimiento:
+
+sp_poblar_pacientes
+
+Implementando las rutinas necesarias para generar dinámicamente los datos de cada columna en las tablas aplicables.
+
+---
+
+## 🧪 Escenarios de Pruebas
+
+### 🔢 Pruebas de Volumen
+
+| Test | Escenario |
+|------|-----------|
+| Test 1 | Registro de 1 Paciente |
+| Test 2 | Registro de 10 Pacientes |
+| Test 3 | Registro de 100 Pacientes |
+| Test 4 | Registro de 1,000 Pacientes |
+| Test 5 | Registro de 10,000 Pacientes |
+| Test 6 | Registro de 1,000,000 Pacientes |
+
+---
+
+### 👥 Pruebas de Naturaleza
+
+| Test | Escenario |
+|------|-----------|
+| Test 7 | Registro de 150 Pacientes Mujeres |
+| Test 8 | Registro de 340 Pacientes Varones entre 20 y 30 años |
+| Test 9 | Registro de 500 Pacientes con edad máxima de 65 años |
+| Test 10 | Registro de 2,200 Pacientes Vivos |
+| Test 11 | Registro de 502 Pacientes Mujeres Finadas mayores de 45 años |
+| Test 12 | Registro de 30 Pacientes en Coma |
+| Test 13 | Registro de 15 Pacientes en Estado Vegetativo |
+| Test 14 | Registro de 107 Pacientes en estado médico "Cuidados Paliativos" |
+| Test 15 | Registro de 208 Pacientes Pediátricos |
+
+---
+
+## 💾 Entregables
+
+El proyecto deberá documentarse en un repositorio privado de GitHub, considerando:
+
+- Inclusión de colaboradores  
+- Manejo adecuado de ramas (Practica05)  
+
+### 📦 Respaldos Requeridos
+
+- Respaldo Estructural (Tablas)  
+- Respaldo Funcional (Rutinas)  
+- Respaldo Post-Población (Tablas + Rutinas + Datos)  
+
+---
+
+## 📄 Documentación
+
+- Archivo README.md  
+- Documentación del código SQL  
+- Evidencias de pruebas realizadas  
+
+---
+
+## 📁 Estructura del Proyecto
+
+ABD_Hospital_<EQUIPO>
+
+Donde <EQUIPO> puede ser:
+
+- GE  
+- PH  
+- HR  
+- MR  
+- MD  
+- MS  
+
+# Integrantes
+| Integrante | Contacto | Rol |
+| :--- | :--- | :--- |
+| Jesús Alejandro Artiaga Morales| [Jesus Artiaga](https://github.com/JesuuusArt) | Developer - Encargado del área de registros medicos |
+| Angel de Jesús Baños Tellez | [Angel_JesusBT](https://github.com/angelJesus13) | Developer - Encargado del área de registros medicos |
+| Al Farias Leyva | [Al Farias](https://github.com/fariasdgs) | Developer - Encargado del área de registros medicos |
+| Francisco Garcia Garcia | [Francisco Garcia](https://github.com/F-Anks) | Developer - Encargado del área de registros medicos |
